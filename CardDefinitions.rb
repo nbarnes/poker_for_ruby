@@ -1,4 +1,5 @@
 
+=begin
 RAW_RANK_TAG_INDEX = 0
 RANK_INDEX = 1
 
@@ -27,3 +28,4 @@ SUITS = [
 	['H', 'Hearts'],
 	['D', 'Diamonds']
 ]
+=end

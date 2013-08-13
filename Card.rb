@@ -1,3 +1,4 @@
+require_relative "./CardDefinitions"
 
 class Card
 
@@ -18,7 +19,7 @@ class Card
 	end
 
 	def asRawString()
-		return suitToRawSuitTag() + rankToRawRankTag()
+		return Card.suitToRawSuitTag(suit) + Card.rankToRawRankTag(rank)
 	end
 
 	def self.rawRankTagToRank(rawTag)
@@ -28,20 +29,29 @@ class Card
 	def self.rawSuitTagToSuit(rawTag)
 	end
 
-=begin
+
 	def self.suitToRawSuitTag(suit)
-		CardDefinitions.SUITS.each do |x|
-			if x[SUIT_INDEX] = suit
-			  return x[RAW_SUIT_TAG_INDEX]
-		end
+
+
+#		if true
+#			return "xx"
+#		end
+
+		SUITS.each do |x|
+			if x[SUIT_INDEX]
+				return x[RAW_SUIT_TAG_INDEX]
+			end
+ 		end
+
 	end
 
 	def self.rankToRawRankTag(rank)
-		CardDefinitions.RANKS.each do |x|
-			if x[RANK_INDEX] = rank
-			  return x[RAW_RANK_TAG_INDEX]
-		end
+#		CardDefinitions.RANKS.each { |x|
+#			if (x[RANK_INDEX] = rank) {
+#			  return x[RAW_RANK_TAG_INDEX]
+#			}
+#		}
 	end
-=end
+
 
 end
