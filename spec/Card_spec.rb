@@ -1,6 +1,6 @@
 require_relative '../Card'
 
-describe Card, "" do
+describe "Card" do
 
 	it "Should reject non-two-character raw Card constructor" do
 		expect{Card.new("too_long")}.to raise_error("Raw card length not 2 in Card.intialize: too_long")
