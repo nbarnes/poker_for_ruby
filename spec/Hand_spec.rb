@@ -65,5 +65,17 @@ describe "Hand" do
 		hand.getBestHandType().should eq(PAIR)
 	end
 
+	["Ad Kd Qs Jc Tc",
+	 "9h 6c 8d 5s 7d",
+	 "2h 3h 4c 5c 6c"].each do |rawHand|
+	 	it "should recognize straight" do
+	 		Hand.new(rawHand).getBestHandType().should eq(STRAIGHT)
+	 	end
+	 end
+
+	 #straight flush tests
+
+	 #royal flush tests
+
 
 end
