@@ -73,9 +73,22 @@ describe "Hand" do
 	 	end
 	 end
 
-	 #straight flush tests
+	["2d 3d 4d 5d 6d",
+	 "5h 8h 9h 6h 7h",
+	 "8c 7c 6c 5c 4c",
+	 "Ks Js Ts 9s Qs"].each do |rawHand|
+	 	it "should recognize straight flush" do
+	 		Hand.new(rawHand).getBestHandType().should eq(STRAIGHT_FLUSH)
+	 	end
+	 end
 
-	 #royal flush tests
+	["Ad Kd Qd Jd Td",
+	 "Th Jh Qh Kh Ah",
+	 "Jc Ac Qc Kc Tc"].each do |rawHand|
+	 	it "should recognize royal flush" do
+	 		Hand.new(rawHand).getBestHandType().should eq(ROYAL_FLUSH)
+	 	end
+	 end
 
 
 end
